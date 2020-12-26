@@ -1,16 +1,18 @@
-﻿.content {
-    width: calc(100% - 221px);
+.content {
+    width: calc(100% - 253px);
     height: calc(100vh - 49px);
     position: absolute;
     top: 49px;
     left: 221px;
     background-color: #E9EBEE;
+    padding:0 16px;
+
 }
     /*page title*/
     .content .header-content {
-        padding: 16px;
         display: flex;
         align-items: center;
+        height: 57px;
     }
 
 
@@ -34,12 +36,9 @@
 .content .header-content .content-feature .btn-content-feature span {
     padding: 0 16px 0 16px;
 }
-/*filter bar*/
-.content .filter-bar {
-}
-/*Grid*/
-.content .grid {
-}
+
 /*paging bar*/
 .content .paging-bar {
+    height:56px;
+    background-color:#ffd800;
 }

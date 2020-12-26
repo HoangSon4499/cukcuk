@@ -1,0 +1,29 @@
+.filter-bar {
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+}
+
+    .filter-bar .filer-left {
+    }
+
+        .filter-bar .filer-left select {
+            border: 1px solid #E9EBEE;
+            height: 40px;
+            outline: none;
+            background-color: #ffffff;
+            padding-left: 16px;
+            padding-right: 8px;
+            border-color: #bbbbbb;
+            border-radius: 4px;
+            margin-left: 16px;
+        }
+
+        .filter-bar .filer-left .select-item {
+        }
+
+    .filter-bar .filer-right {
+        position: absolute;
+        right: 16px;
+    }

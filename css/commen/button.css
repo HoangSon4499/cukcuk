@@ -1,24 +1,51 @@
-﻿.m-btn {
+.m-btn {
     background-color: #019160;
     border-radius: 4px;
     height: 40px;
     color: #ffffff;
     font-family: GoogleSans-Regular;
     font-size: 13px;
-    padding-left:16px;
-    padding-right:16px;
-    display:flex;
-    align-items:center;
-    outline:none;
-    border:none;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: none;
 }
-.m-btn .btn-text{
-    margin-left: 8px;
-}
-.m-btn .m-btn-icon{
-    background-position:center;
-}
+
+    .m-btn .btn-text {
+        margin-left: 8px;
+    }
+
+    .m-btn .m-btn-icon {
+        background-position: center;
+    }
 
     .m-btn:hover {
         background-color: #2FBE8E
     }
+
+.m-second-button {
+    background-color: #ffffff;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    height: 40px;
+    color: #000000;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+    .m-second-button:hover {
+        background-color: #e9ebee;
+    }
+
+.m-btn-refresh {
+    background-image: url('/content/icon/refresh.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    width: 9px;
+}
