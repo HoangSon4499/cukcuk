@@ -1,0 +1,80 @@
+﻿.nav-bar {
+    width: 220px;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    height: 100vh;
+    float: left;
+}
+
+    .nav-bar .logo-site {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        position: relative;
+    }
+
+    .nav-bar .logo-box {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        bottom: 12px;
+    }
+        /*logo page*/
+
+        .nav-bar .logo-box .toggle-icon {
+            width: 24px;
+            height: 24px;
+            background: url('/content/img/toggle.png') no-repeat;
+            background-size: contain;
+        }
+
+        .nav-bar .logo-box .cukcuk-logo {
+            width: 100%;
+            height: 24px;
+            background: url('/content/img/cukcuk-logo.png') no-repeat;
+            background-size: contain;
+            margin-left: 10px;
+        }
+
+
+    .nav-bar .navbar-content {
+        width: 100%;
+    }
+
+/*nav content*/
+        .nav-bar .navbar-content .nav-item {
+            display: flex;
+            padding-left:24px;
+            line-height: 44px;
+            cursor:pointer;
+
+        }
+            .nav-bar .navbar-content .nav-item:hover {
+                background-color: #e5e5e5;
+                color:#000000;
+            }
+
+.nav-item-icon {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    background-size: contain;
+}
+.nav-item-icon1 {
+    background-image: url('/content/icon/document-online.png');
+}
+.nav-item-icon2 {
+    background-image: url('/content/icon/dashboard.png');
+}
+.nav-item-icon3 {
+    background-image: url('/content/icon/dic-employee.png');
+}
+.nav-item-icon4 {
+    background-image: url('/content/icon/report.png');
+}
+
+.nav-item .nav-item-text {
+    padding-left: 10px;
+}

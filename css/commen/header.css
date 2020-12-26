@@ -1,0 +1,60 @@
+﻿.header {
+    float: left;
+    width: calc(100% - 221px);
+    height: 48px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #FFFFFF;
+    display:flex;
+}
+
+    .header .select-icon {
+        background-image: url('/content/icon/avatar-default.png');
+        background-size: contain;
+        background-repeat:no-repeat;
+        width:24px;
+        height:24px;
+        margin: 12px 5px 12px 16px;
+     
+    }
+
+    .header .select-name {
+        line-height: 48px;
+        
+    }
+
+        .header .select-name select {
+            border: none;
+        }
+    .header .user{
+        position:absolute;
+        right:16px;
+        display: flex;
+      
+    }
+        .header .user .user-notification {
+            background-image: url('/content/icon/icon-thongbao.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            margin: 12px 16px 12px 0;
+        }
+        .header .user .user-icon {
+            background-image: url('/content/icon/avatar-default.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            margin: 12px 16px 12px 0;
+        }
+        .header .user .user-name {
+            line-height:48px;
+        }
+        .header .user .user-setting {
+            background-image: url('/content/icon/option.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            margin: 12px 16px 12px 16px;
+        }
