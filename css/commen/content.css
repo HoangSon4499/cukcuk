@@ -4,9 +4,8 @@
     position: absolute;
     top: 49px;
     left: 221px;
-    background-color: #E9EBEE;
+    /* background-color: #E9EBEE; */
     padding:0 16px;
-
 }
     /*page title*/
     .content .header-content {
@@ -39,6 +38,12 @@
 
 /*paging bar*/
 .content .paging-bar {
-    height:56px;
-    background-color:#ffd800;
+    height: 56px;
+    background-color: #ffd800;
+    line-height: 56px;
+    display: flex;
 }
+
+    .content .paging-bar .paging-bar-button{
+        margin:auto;
+    }
