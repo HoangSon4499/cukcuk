@@ -1,4 +1,4 @@
-﻿.header {
+.header {
     float: left;
     width: calc(100% - 221px);
     height: 48px;
@@ -22,6 +22,7 @@
 
         .header .select-name select {
             border: none;
+            outline: none;
         }
 
     .header .user {

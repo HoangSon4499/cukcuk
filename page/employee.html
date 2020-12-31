@@ -3,16 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <title>Cuk Cuk</title>
+<!--thư viện-->
+<!--dùng chung-->
+<!--dùng riêng-->
     <link href="/css/commen/main.css" rel="stylesheet" />
     <link href="/css/commen/button.css" rel="stylesheet" />
     <link href="/css/commen/toolbar.css" rel="stylesheet" />
-    <link href="/css/commen/grid.css" rel="stylesheet" />
     <link href="/css/commen/input.css" rel="stylesheet" />
     <link href="/css/commen/icon.css" rel="stylesheet" />
+    <link href="/css/commen/grid.css" rel="stylesheet" />
     <link href="/css/commen/header.css" rel="stylesheet" />
     <link href="/css/commen/navbar.css" rel="stylesheet" />
-    <link href="/css/page/employee.css" rel="stylesheet" />
     <link href="/css/commen/content.css" rel="stylesheet" />
+    <link href="/css/page/employee.css" rel="stylesheet" />
 </head>
 <body>
     <div class="nav-bar">
@@ -31,13 +34,13 @@
         <div class="navbar-content">
             <div class="nav-item">
                 <div class="nav-item-icon nav-item-icon2"></div>
-                <div class="nav-item-text">Lập hồ sơ giấy</div>
+                <div class="nav-item-text"><a href="customer.html">Danh sách khách hàng</a></div>
             </div>
         </div>
         <div class="navbar-content">
             <div class="nav-item">
                 <div class="nav-item-icon nav-item-icon3"></div>
-                <div class="nav-item-text">Theo dõi chi</div>
+                <div class="nav-item-text"><a href="employee.html">Danh sách nhân viên</a></div>
             </div>
         </div>
         <div class="navbar-content">
@@ -51,9 +54,9 @@
         <div class="select-icon"></div>
         <div class="select-name">
             <select class="select-item">
-                <option >Nhà hàng Biển Đông</option>
-                <option >Nhà hàng Sơn Hải</option>
-                <option >Nhà hàng Hoàng Sơn</option>
+                <option>Nhà hàng Biển Đông</option>
+                <option>Nhà hàng Sơn Hải</option>
+                <option>Nhà hàng Hoàng Sơn</option>
             </select>
         </div>
         <div class="user">
@@ -75,7 +78,7 @@
         </div>
         <div class="filter-bar">
             <div class="filer-left">
-                <input class="icon-search input-search"type="text" placeholder="Tìm kiếm theo Mã, Tên nhân viên" style="width:200px;" />
+                <input class="icon-search input-search" type="text" placeholder="Tìm kiếm theo Mã, Tên nhân viên" style="width:200px;" />
                 <select class="select-item">
                     <option>Phòng đào tạo</option>
                     <option>Phòng nhân viên</option>
@@ -84,117 +87,53 @@
             </div>
             <div class="filer-right">
                 <button class="m-btn-refresh m-second-button">
-
                 </button>
             </div>
         </div>
         <div class="grid gird-employee">
-            <table border="0" cellspacing="0" width="100%">
+            <table cellspacing="0" width="100%" style="overflow:scroll">
                 <thead>
                     <tr>
-                        <th>Mã nhân viên</th>
-                        <th>Họ và tên</th>
-                        <th>Giới tính</th>
-                        <th>Ngày sinh</th>
-                        <th>Số điện thoại</th>
-                        <th>Địa chỉ</th>
+                        <th style="text-align:left" fieldName="EmployeeCode">Mã nhân viên</th>
+                        <th style="text-align:left" fieldName="FullName">Họ và tên</th>
+                        <th style="text-align:left" fieldName="GenderName">Giới tính</th>
+                        <th style="text-align:center" fieldName="EmployeeCode">Ngày sinh</th>
+                        <th style="text-align:left" fieldName="EmployeeCode">Số điện thoại</th>
+                        <th style="text-align:left" fieldName="EmployeeCode">Email</th>
+                        <th style="text-align:left" fieldName="EmployeeCode">Địa chỉ</th>
+                        <th style="text-align:left" fieldName="EmployeeCode">Chức vụ</th>
+                        <th style="text-align:left" fieldName="EmployeeCode">Phòng ban</th>
+                        <th style="text-align:right" fieldName="EmployeeCode">Mức lương hiện tại</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                   
+                    <!--<tr>
                         <td>NV000001</td>
                         <td>Nguyễn Hoàng Sơn</td>
                         <td>Nam</td>
                         <td>05/04/1999</td>
                         <td>1236579845</td>
+                        <td>nguyenhoangson4499@gmail.com</td>
                         <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-                    <tr>
-                        <td>NV000001</td>
-                        <td>Nguyễn Hoàng Sơn</td>
-                        <td>Nam</td>
-                        <td>05/04/1999</td>
-                        <td>1236579845</td>
-                        <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-                    <tr>
-                        <td>NV000001</td>
-                        <td>Nguyễn Hoàng Sơn</td>
-                        <td>Nam</td>
-                        <td>05/04/1999</td>
-                        <td>1236579845</td>
-                        <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-                    <tr>
-                        <td>NV000001</td>
-                        <td>Nguyễn Hoàng Sơn</td>
-                        <td>Nam</td>
-                        <td>05/04/1999</td>
-                        <td>1236579845</td>
-                        <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-                    <tr>
-                        <td>NV000001</td>
-                        <td>Nguyễn Hoàng Sơn</td>
-                        <td>Nam</td>
-                        <td>05/04/1999</td>
-                        <td>1236579845</td>
-                        <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-                    <tr>
-                        <td>NV000001</td>
-                        <td>Nguyễn Hoàng Sơn</td>
-                        <td>Nam</td>
-                        <td>05/04/1999</td>
-                        <td>1236579845</td>
-                        <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-                    <tr>
-                        <td>NV000001</td>
-                        <td>Nguyễn Hoàng Sơn</td>
-                        <td>Nam</td>
-                        <td>05/04/1999</td>
-                        <td>1236579845</td>
-                        <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-                    <tr>
-                        <td>NV000001</td>
-                        <td>Nguyễn Hoàng Sơn</td>
-                        <td>Nam</td>
-                        <td>05/04/1999</td>
-                        <td>1236579845</td>
-                        <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-                    <tr>
-                        <td>NV000001</td>
-                        <td>Nguyễn Hoàng Sơn</td>
-                        <td>Nam</td>
-                        <td>05/04/1999</td>
-                        <td>1236579845</td>
-                        <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-                    <tr>
-                        <td>NV000001</td>
-                        <td>Nguyễn Hoàng Sơn</td>
-                        <td>Nam</td>
-                        <td>05/04/1999</td>
-                        <td>1236579845</td>
-                        <td>Đan nhiễm - Thị trấn Văn Giang - Văn Giang - Hưng Yên</td>
-                    </tr>
-
+                        <td>Dev</td
+                        <td>CNTT</td>
+                        <td>123456789</td>
+                    </tr>-->
                 </tbody>
             </table>
         </div>
         <div class="paging-bar">
             <div class="paging-bar-notification">Hiển thị 01-20/123 lao động</div>
             <div class="paging-bar-button">
-                <button class="pre-all"></button>
-                <button class="pre"></button>
-                <button class="paging-1"></button>
-                <button class="paging-2"></button>
-                <button class="paging-3"></button>
-                <button class="next"></button>
-                <button class="next-all"></button>
+                <button class="m-btn-paging pre-all"></button>
+                <button class="m-btn-paging pre"></button>
+                <button class="m-btn-paging-number paging-1">1</button>
+                <button class="m-btn-paging-number paging-2">2</button>
+                <button class="m-btn-paging-number paging-3">3</button>
+                <button class="m-btn-paging next"></button>
+                <button class="m-btn-paging next-all"></button>
             </div>
             <div class="select-count">
                 <select>
@@ -205,5 +144,12 @@
             </div>
         </div>
     </div>
+    <!--Thư viện-->
+    <script src="/lib/jquery-3.5.1.min.js"></script>
+    <!--Sử dụng chung-->
+    <script src="/js/commen/commen.js"></script>
+    <script src="/js/commen/base.js"></script>
+    <!--Dùng riêng từng trang-->
+    <script src="/js/page/employee.js"></script>
 </body>
 </html>

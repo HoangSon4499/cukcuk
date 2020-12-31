@@ -39,11 +39,34 @@
 /*paging bar*/
 .content .paging-bar {
     height: 56px;
-    background-color: #ffd800;
     line-height: 56px;
     display: flex;
 }
 
     .content .paging-bar .paging-bar-button{
         margin:auto;
+    }
+        .content .paging-bar .paging-bar-button .pre-all {
+            background-image: url('/content/icon/btn-firstpage.svg');
+        }
+        .content .paging-bar .paging-bar-button .pre {
+            background-image: url('/content/icon/btn-prev-page.svg');
+        }
+        .content .paging-bar .paging-bar-button .paging-1 {
+            background-color: #019160;
+        }
+        .content .paging-bar .paging-bar-button .paging-2 {
+        }
+        .content .paging-bar .paging-bar-button .paging-3 {
+        }
+        .content .paging-bar .paging-bar-button .next {
+            background-image: url('/content/icon/btn-next-page.svg');
+        }
+        .content .paging-bar .paging-bar-button .next-all {
+            background-image: url('/content/icon/btn-lastpage.svg');
+        }
+    .content .paging-bar .select-count select{
+        height: 30px;
+        border:none;
+        outline:none;
     }
