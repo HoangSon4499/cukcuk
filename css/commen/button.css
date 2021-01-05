@@ -49,3 +49,32 @@
     border-radius: 4px;
     width: 9px;
 }
+.m-btn-paging {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+}
+    .m-btn-paging:hover {
+        background-color: #E9EBEE;
+    }
+    .m-btn-paging-number {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: 1px solid #808080;
+        text-align: center;
+        outline: none;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: bold;
+    }
+        .m-btn-paging-number:hover {
+            background-color: #E9EBEE;
+        }

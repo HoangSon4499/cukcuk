@@ -1,6 +1,7 @@
 .grid {
     width: 100%;
    height:200px;
+   overflow:scroll;
 }
 table th, td{
     border-bottom:1px solid #bbbbbb;
@@ -11,6 +12,12 @@ table th, td{
     white-space:nowrap;
     max-width:100px;
 
+}
+table thead tr th {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background-color:#ffffff;
 }
 table tr:hover{
     background-color:#bbbbbb;
