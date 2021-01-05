@@ -1,59 +1,86 @@
-﻿.m-dialog {
-
+.m-dialog {
 }
 
     .m-dialog .dialog-modal {
-        opacity:.4;
+        opacity: .4;
         position: fixed;
-        top:0;
-        bottom:0;
-        left:0;
-        right:0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         background-color: black;
-        z-index:999;
+        z-index: 999;
     }
 
     .m-dialog .dialog-content {
         position: absolute;
-        width: 800px;
-        height: 600px;
+        width: 695px;
+        height: 593px;
         background-color: #ffffff;
         z-index: 1000;
-        top: calc(50% - 300px);
-        left: calc(50% - 400px);
+        top: calc(50% - 296px);
+        left: calc(50% - 347px);
     }
-.dialog-content-header{
-    display:flex;
+
+.dialog-content-header {
+    display: flex;
 }
+
 .dialog-content-header-text {
     margin-left: 24px;
     margin-top: 24px;
     font-weight: bold;
     font-size: 20px;
 }
+
 .dialog-content-header-icon {
     background-image: url('/content/icon/x.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    width:24px;
-    height:24px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     border: 1px solid #808080;
-    position:absolute;
-    right:0;
-    cursor:pointer;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
     margin-right: 5px;
-    margin-top:5px;
+    margin-top: 5px;
 }
-.dialog-content-bodytop{
-    margin-left:24px;
-    margin-right:24px;
+
+.dialog-content-bodytop {
+    margin-left: 24px;
+    margin-right: 24px;
     margin-top: 15px;
-    display:flex;
+    display: flex;
+    width: 626px;
+    height: 240px
 }
-.dialog-content-bodytop-img{
-    width:190px;
+
+.dialog-content-body {
+    margin-left: 24px;
+    margin-right: 24px;
 }
+
+.dialog-content-body1 {
+    width: 420px;
+    float: left;
+}
+
+.dialog-content-body2 {
+    width: 200px;
+    float:left;
+    margin-left:25px;
+}
+.dialog-content-body3{
+    clear:left;
+    padding-top: 20px;
+}
+
+.dialog-content-bodytop-img {
+    width: 190px;
+}
+
 .dialog-content-bodytop-img-1 {
     background-image: url('/content/icon/avt-user-default.png');
     background-repeat: no-repeat;
@@ -62,23 +89,72 @@
     height: 190px;
     border-radius: 50%;
 }
-.dialog-content-bodytop-img-2{
-    text-align:center;
+
+.dialog-content-bodytop-img-2 {
+    text-align: center;
     margin-top: -10px;
 }
-.dialog-content-bodytop-infor1{
-    margin-left:25px;
+
+.dialog-content-bodytop-infor1 {
+    margin-left: 25px;
+    width: 220px;
 }
-input{
-    border:1px solid #808080;
-    outline:none;
+
+.dialog-content-bodytop-infor2 {
+    margin-left: 25px;
+    width: 220px;
 }
-span{
+
+input {
+    border: 1px solid #808080;
+    outline: none;
+}
+
+span {
     color: red;
 }
-.text{
+
+.text {
     margin-top: 20px;
 }
-.m-input{
+
+.m-input {
     margin-top: 5px;
+}
+
+select {
+    width: 203px;
+    height: 37px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: 1px solid #808080;
+    outline: none;
+}
+
+.ip {
+    width: 385px;
+}
+.dialog-footer{
+    height: 57px;
+    width:695px;
+    background-color:#808080;
+    margin-top:15px;
+    position:relative;
+}
+.btnLuu {
+    position: absolute;
+    right:24px;
+    top:9px;
+    align-items:center;
+}
+.icon-save {
+    background-image: url('/content/icon/save.svg');
+    background-size:contain;
+    width:16px;
+    height:16px;
+}
+.btnHuy{
+    line-height:57px;
+    position:absolute;
+    right: 130px;
 }
