@@ -3,19 +3,21 @@
 <head>
     <meta charset="utf-8" />
     <title>Cuk Cuk</title>
-<!--thư viện-->
-<!--dùng chung-->
-<!--dùng riêng-->
-    <link href="/css/commen/main.css" rel="stylesheet" />
-    <link href="/css/commen/button.css" rel="stylesheet" />
-    <link href="/css/commen/toolbar.css" rel="stylesheet" />
-    <link href="/css/commen/input.css" rel="stylesheet" />
-    <link href="/css/commen/icon.css" rel="stylesheet" />
-    <link href="/css/commen/grid.css" rel="stylesheet" />
-    <link href="/css/commen/header.css" rel="stylesheet" />
-    <link href="/css/commen/navbar.css" rel="stylesheet" />
-    <link href="/css/commen/content.css" rel="stylesheet" />
-    <link href="/css/page/employee.css" rel="stylesheet" />
+    <!--thư viện-->
+    <link href="/css/commen/main.css?v=1.1" rel="stylesheet" />
+    <!--dùng chung-->
+    <link href="/css/commen/commen.css" rel="stylesheet" />
+    <link href="/css/commen/dialog.css" rel="stylesheet" />
+    <link href="/css/commen/button.css?v=1.1" rel="stylesheet" />
+    <link href="/css/commen/toolbar.css?v=1.1" rel="stylesheet" />
+    <link href="/css/commen/input.css?v=1.1" rel="stylesheet" />
+    <link href="/css/commen/icon.css?v=1.1" rel="stylesheet" />
+    <link href="/css/commen/grid.css?v=1.1" rel="stylesheet" />
+    <link href="/css/commen/header.css?v=1.1" rel="stylesheet" />
+    <link href="/css/commen/navbar.css?v=1.1" rel="stylesheet" />
+    <link href="/css/commen/content.css?v=1.1" rel="stylesheet" />
+    <!--dùng riêng-->
+    <link href="/css/page/employee.css?v=1.1" rel="stylesheet" />
 </head>
 <body>
     <div class="nav-bar">
@@ -97,18 +99,18 @@
                         <th style="text-align:left" fieldName="EmployeeCode">Mã nhân viên</th>
                         <th style="text-align:left" fieldName="FullName">Họ và tên</th>
                         <th style="text-align:left" fieldName="GenderName">Giới tính</th>
-                        <th style="text-align:center" fieldName="EmployeeCode">Ngày sinh</th>
-                        <th style="text-align:left" fieldName="EmployeeCode">Số điện thoại</th>
-                        <th style="text-align:left" fieldName="EmployeeCode">Email</th>
-                        <th style="text-align:left" fieldName="EmployeeCode">Địa chỉ</th>
-                        <th style="text-align:left" fieldName="EmployeeCode">Chức vụ</th>
-                        <th style="text-align:left" fieldName="EmployeeCode">Phòng ban</th>
-                        <th style="text-align:right" fieldName="EmployeeCode">Mức lương hiện tại</th>
-                        
+                        <th style="text-align:center" fieldName="DateOfBirth" formatType="ddmmyyyy">Ngày sinh</th>
+                        <th style="text-align:left" fieldName="PhoneNumber">Số điện thoại</th>
+                        <th style="text-align:left" fieldName="Email">Email</th>
+                        <th style="text-align:left" fieldName="Address">Địa chỉ</th>
+                        <th style="text-align:left" fieldName="PositionName">Chức vụ</th>
+                        <th style="text-align:left" fieldName="QualificationName">Phòng ban</th>
+                        <th style="text-align:right" fieldName="Salary" formatType="MoneyVND">Mức lương hiện tại</th>
+
                     </tr>
                 </thead>
                 <tbody>
-                   
+
                     <!--<tr>
                         <td>NV000001</td>
                         <td>Nguyễn Hoàng Sơn</td>
@@ -141,6 +143,47 @@
                     <option>20 lao động/trang</option>
                     <option>30 lao động/trang</option>
                 </select>
+            </div>
+        </div>
+    </div>
+    <div class="m-dialog dialog-detail">
+        <div class="dialog-modal"></div>
+        <div class="dialog-content">
+            <div class="dialog-content-header">
+                <div class="dialog-content-header-text">THÔNG TIN KHÁCH HÀNG</div>
+                <div class="dialog-content-header-icon"></div>
+            </div>
+            <div class="dialog-content-bodytop">
+                <div class="dialog-content-bodytop-img">
+                    <div class="dialog-content-bodytop-img-1"></div>
+                    <div class="dialog-content-bodytop-img-2">
+                        <p>
+                            Vui lòng chọn ảnh có định dạng
+                            .jpg, .jpeg, .png, .gif
+                        </p>
+                    </div>
+                </div>
+                <div class="dialog-content-bodytop-infor1">
+                    <div>
+                        <label>Mã khách hàng(*)</label>
+                    </div>
+                    <div>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <label>Mã khách hàng(*)</label>
+                    </div>
+                    <div>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <label>Mã khách hàng(*)</label>
+                    </div>
+                    <div>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="dialog-content-bodytop-infor2"></div>
             </div>
         </div>
     </div>

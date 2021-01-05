@@ -1,0 +1,75 @@
+﻿.m-dialog {
+
+}
+
+    .m-dialog .dialog-modal {
+        opacity:.4;
+        position: fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background-color: black;
+        z-index:999;
+    }
+
+    .m-dialog .dialog-content {
+        position: absolute;
+        width: 800px;
+        height: 600px;
+        background-color: #ffffff;
+        z-index: 1000;
+        top: calc(50% - 300px);
+        left: calc(50% - 400px);
+    }
+.dialog-content-header{
+    display:flex;
+}
+.dialog-content-header-text {
+    margin-left: 24px;
+    margin-top: 24px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.dialog-content-header-icon {
+    background-image: url('/content/icon/x.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+    border: 1px solid #808080;
+    position:absolute;
+    right:0;
+    cursor:pointer;
+    margin-right: 5px;
+    margin-top:5px;
+}
+.dialog-content-bodytop{
+    margin-left:24px;
+    margin-right:24px;
+    margin-top: 15px;
+    display:flex;
+}
+.dialog-content-bodytop-img{
+    width:200px;
+}
+.dialog-content-bodytop-img-1 {
+    background-image: url('/content/icon/avt-user-default.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.dialog-content-bodytop-img-2{
+    text-align:center;
+    margin-top: -10px;
+}
+.dialog-content-bodytop-infor1{
+    margin-left:25px;
+}
+input{
+    border:1px solid #808080;
+    outline:none;
+}

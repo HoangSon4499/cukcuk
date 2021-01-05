@@ -7,6 +7,10 @@ class CustomerJS extends BaseJS{
        /* this.loadData();*/
         super();
     }
+
+    setDataUrl() {
+        this.getDataUrl = "http://api.manhnv.net/api/customers";
+    }
     /**-------------------------------
      * Hàm loadData
      * createBy: NHSON(31/12/2020)
@@ -14,7 +18,7 @@ class CustomerJS extends BaseJS{
     /*loadData() {
         // lấy dữ liệu về
         $.ajax({
-            url: "http://api.manhnv.net/api/customers",
+            url: "",
             method: "GET",
         }).done(function (res) {
             var data = res;

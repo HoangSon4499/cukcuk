@@ -4,18 +4,21 @@ $(document).ready(function () {
 
 class EmployeeJS extends BaseJS{
     constructor() {
-        this.loadData();
+        //this.loadData();
         super();
 
+    }
+    setDataUrl() {
+        this.getDataUrl ="http://api.manhnv.net/api/employees";
     }
     /**
      * Load Dữ liệu
      * createBy: nhson(31/12/2020)
      * */
-    loadData() {
+/*    loadData() {
         
-    }
-
+    
+    }*/
 
     /**
      * Thêm Dữ liệu
