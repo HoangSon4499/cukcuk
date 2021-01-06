@@ -1,4 +1,5 @@
 .m-dialog {
+    display: none;
 }
 
     .m-dialog .dialog-modal {
@@ -69,11 +70,12 @@
 
 .dialog-content-body2 {
     width: 200px;
-    float:left;
-    margin-left:25px;
+    float: left;
+    margin-left: 25px;
 }
-.dialog-content-body3{
-    clear:left;
+
+.dialog-content-body3 {
+    clear: left;
     padding-top: 20px;
 }
 
@@ -110,6 +112,14 @@ input {
     outline: none;
 }
 
+    input:focus {
+        border: 1px solid #019160;
+    }
+
+.border-red {
+    border: 1px solid red;
+}
+
 span {
     color: red;
 }
@@ -134,27 +144,32 @@ select {
 .ip {
     width: 385px;
 }
-.dialog-footer{
+
+.dialog-footer {
     height: 57px;
-    width:695px;
-    background-color:#808080;
-    margin-top:15px;
-    position:relative;
+    width: 695px;
+    background-color: #808080;
+    margin-top: 15px;
+    position: relative;
 }
+
 .btnLuu {
     position: absolute;
-    right:24px;
-    top:9px;
-    align-items:center;
+    right: 24px;
+    top: 9px;
+    align-items: center;
 }
+
 .icon-save {
     background-image: url('/content/icon/save.svg');
-    background-size:contain;
-    width:16px;
-    height:16px;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
 }
-.btnHuy{
-    line-height:57px;
-    position:absolute;
+
+.btnHuy {
+    line-height: 57px;
+    position: absolute;
     right: 130px;
+    cursor: pointer;
 }

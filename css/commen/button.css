@@ -11,6 +11,7 @@
     align-items: center;
     outline: none;
     border: none;
+    cursor:pointer;
 }
 
     .m-btn .btn-text {

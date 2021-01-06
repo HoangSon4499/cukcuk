@@ -4,12 +4,11 @@ $(document).ready(function () {
 
 class EmployeeJS extends BaseJS{
     constructor() {
-        //this.loadData();
         super();
 
     }
     setDataUrl() {
-        this.getDataUrl ="http://api.manhnv.net/api/employees";
+        this.getDataUrl ="http://api.manhnv.net/api/customers";
     }
     /**
      * Load Dữ liệu

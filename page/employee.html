@@ -72,7 +72,7 @@
         <div class="header-content">
             <div class="title">Danh sách nhân viên</div>
             <div class="content-feature">
-                <button class="m-btn">
+                <button id="btnAdd" class="m-btn">
                     <div class="m-btn-icon icon-add"></div>
                     <div class="btn-text">Thêm lao động</div>
                 </button>
@@ -88,7 +88,7 @@
                 </select>
             </div>
             <div class="filer-right">
-                <button class="m-btn-refresh m-second-button">
+                <button id="btnRefresh" class="m-btn-refresh m-second-button">
                 </button>
             </div>
         </div>
@@ -96,16 +96,16 @@
             <table cellspacing="0" width="100%" style="overflow:scroll">
                 <thead>
                     <tr>
-                        <th style="text-align:left" fieldName="EmployeeCode">Mã nhân viên</th>
+                        <th style="text-align:left" fieldName="CustomerCode">Mã nhân viên</th>
                         <th style="text-align:left" fieldName="FullName">Họ và tên</th>
                         <th style="text-align:left" fieldName="GenderName">Giới tính</th>
                         <th style="text-align:center" fieldName="DateOfBirth" formatType="ddmmyyyy">Ngày sinh</th>
                         <th style="text-align:left" fieldName="PhoneNumber">Số điện thoại</th>
+                        <th style="text-align:left" fieldName="MemberCardCode">Mã thẻ thành viên</th>
                         <th style="text-align:left" fieldName="Email">Email</th>
                         <th style="text-align:left" fieldName="Address">Địa chỉ</th>
-                        <th style="text-align:left" fieldName="PositionName">Chức vụ</th>
-                        <th style="text-align:left" fieldName="QualificationName">Phòng ban</th>
-                        <th style="text-align:right" fieldName="Salary" formatType="MoneyVND">Mức lương hiện tại</th>
+                        <th style="text-align:left" fieldName="CustomerGroupName">Nhóm khách hàng</th>
+                        <th style="text-align:left" fieldName="CompanyName">Tên công ty</th>
 
                     </tr>
                 </thead>
@@ -146,12 +146,12 @@
             </div>
         </div>
     </div>
-    <div class="m-dialog dialog-detail">
+    <div id="dialog" class="m-dialog dialog-detail">
         <div class="dialog-modal"></div>
         <div class="dialog-content">
             <div class="dialog-content-header">
                 <div class="dialog-content-header-text">THÔNG TIN KHÁCH HÀNG</div>
-                <div class="dialog-content-header-icon"></div>
+                <div id="exit" class="dialog-content-header-icon"></div>
             </div>
             <div class="dialog-content-bodytop">
                 <div class="dialog-content-bodytop-img">
@@ -168,19 +168,19 @@
                         <label>Mã khách hàng(<span>*</span>)</label>
                     </div>
                     <div class="m-input">
-                        <input type="text" />
+                        <input type="text" id="txtEmpCode" fieldName="CustomerCode" required/>
                     </div>
                     <div class="text">
                         <label>Mã thẻ thành viên</label>
                     </div>
                     <div class="m-input">
-                        <input type="text" />
+                        <input type="text" id="txtMemberCard" fieldName="MemberCardCode"/>
                     </div>
                     <div class="text">
                         <label>Ngày sinh</label>
                     </div>
                     <div class="m-input">
-                        <input type="text" placeholder="mm/dd/yyyy"/>
+                        <input type="date" placeholder="mm/dd/yyyy" id="txtDateOfBirth" fieldName="DateOfBirth"/>
                     </div>
                 </div>
                 <div class="dialog-content-bodytop-infor2">
@@ -188,26 +188,26 @@
                         <label>Họ và tên(<span>*</span>)</label>
                     </div>
                     <div class="m-input">
-                        <input type="text" />
+                        <input type="text" id="txtFullName" fieldName="FullName" required/>
                     </div>
                     <div class="text">
                         <label>Nhóm khách hàng</label>
                     </div>
                     <div class="m-input">
-                        <select>
-                            <option>Khách vip</option>
-                            <option>Khách hàng thân thiện</option>
-                            <option>Khách hàng MISA</option>
+                        <select id="cbxEmpGroup" fieldName="CustomerGroupId">
+                            <option >Khách vip</option>
+                            <option >Khách hàng thân thiện</option>
+                            <option >Khách hàng MISA</option>
                         </select>
                     </div>
                     <div class="text">
                         <label>Giới tính</label>
                     </div>
                     <div class="m-input">
-                        <select>
-                            <option>Nam</option>
-                            <option>Nữ</option>
-                            <option>Khác</option>
+                        <select id="cbxGender" fieldName="Gender">
+                            <option value="1">Nam</option>
+                            <option value="0">Nữ</option>
+                            <option value="3">Khác</option>
                         </select>
                     </div>
                 </div>
@@ -219,13 +219,13 @@
                             <label>Email</label>
                         </div>
                         <div class="m-input">
-                            <input type="text" placeholder="example@domain.com" class="ip"/>
+                            <input type="email" placeholder="example@domain.com" class="ip" id="Email" fieldName="Email"/>
                         </div>
                         <div class="text">
                             <label>Tên công ty</label>
                         </div>
                         <div class="m-input">
-                            <input type="text" class="ip"/>
+                            <input type="text" class="ip" id="txtCompanyName" fieldName="CompanyName"/>
                         </div>
                     </div>
                 </div>
@@ -234,13 +234,13 @@
                         <label>Số điện thoại(<span>*</span>)</label>
                     </div>
                     <div class="m-input">
-                        <input type="text" />
+                        <input type="text" id="txtPhoneNumber" fieldName="PhoneNumber" required/>
                     </div>
                     <div class="text">
                         <label>Mã số thuế</label>
                     </div>
                     <div class="m-input">
-                        <input type="text" placeholder="Mã số thuế của công ty"/>
+                        <input type="text" placeholder="Mã số thuế của công ty" id="txtIdCardOfCompany" fieldName="CompanyTaxCode"/>
                     </div>
                 </div>
                 <div class="dialog-content-body3">
@@ -248,14 +248,14 @@
                         <label>Địa chỉ</label>
                     </div>
                     <div class="m-input">
-                        <input type="text" style="width:613px"/>
+                        <input type="text" style="width:613px" id="txtAddress" fieldName="Address"/>
                     </div>
                 </div>
             </div>
             <div class="dialog-footer">
-                <div class="btnHuy">Hủy</div>
+                <div id="cancel" class="btnHuy">Hủy</div>
                 <div class="btnLuu">
-                    <button class="m-btn">
+                    <button id="btnSave" class="m-btn">
                         <div class="m-btn-icon icon-save"></div>
                         <div class="btn-text">Lưu</div>
                     </button>
