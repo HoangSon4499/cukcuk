@@ -16,10 +16,10 @@
     .m-dialog .dialog-content {
         position: absolute;
         width: 695px;
-        height: 593px;
+        height: 578px;
         background-color: #ffffff;
         z-index: 1000;
-        top: calc(50% - 296px);
+        top: calc(50% - 289px);
         left: calc(50% - 347px);
     }
 
@@ -128,10 +128,14 @@ span {
     margin-top: 20px;
 }
 
-.m-input {
+.m-radio-group {
     margin-top: 5px;
+    display:flex;
 }
-
+.m-radio-item {
+    margin-right: 25px;
+    line-height: 37px;
+}
 select {
     width: 203px;
     height: 37px;

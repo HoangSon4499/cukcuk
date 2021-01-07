@@ -195,20 +195,23 @@
                     </div>
                     <div class="m-input">
                         <select id="cbxEmpGroup" fieldName="CustomerGroupId">
-                            <option >Khách vip</option>
+                            <option value="19165ed7-212e-21c4-0428-030d4265475f">Khách vip</option>
+                            <option value="00000000-0000-0000-0000-000000000000">Khách hàng MISA</option>
                             <option >Khách hàng thân thiện</option>
-                            <option >Khách hàng MISA</option>
                         </select>
                     </div>
                     <div class="text">
                         <label>Giới tính</label>
                     </div>
-                    <div class="m-input">
-                        <select id="cbxGender" fieldName="Gender">
-                            <option value="1">Nam</option>
-                            <option value="0">Nữ</option>
-                            <option value="3">Khác</option>
-                        </select>
+                    <div class="m-radio-group">
+                        <div class="m-radio-item" >
+                            <input type="radio" id="rdMale" value="1" name="gender" fieldName="Gender" checked />
+                            <label>Nam</label>
+                        </div>
+                        <div class="m-radio-item" >
+                            <input type="radio" id="rdMale" value="0" name="gender" fieldName="Gender"/>
+                            <label>Nữ</label>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,15 +1,17 @@
 class BaseJS {
     constructor() {
-        this.getDataUrl = null;
-        this.setDataUrl();
+        this.host = "http://api.manhnv.net";
+        this.apiRouter = null;
+        this.setApiRouter();
         this.loadData();
         this.initEvents();
     }
+
     /**
      * Hàm lấy đường dẫn api
      * create by: NHSON(1-5-2021)
      * */
-    setDataUrl() {
+    setApiRouter() {
 
     }
 
@@ -58,27 +60,21 @@ class BaseJS {
             $.each(inputs, function (index, input) {
                 var propertyName = $(this).attr('fieldName');
                 var value = $(this).val();
-                customer[propertyName] = value;
+                if ($(this).attr('fieldName') == "radio") {
+                    if ($(this).attr('checked') == true) {
+
+                    }
+                }
                 debugger;
+                customer[propertyName] = value;
+
             })
             console.log(customer);
-            var employee = {
-                "CustomerCode": $('#txtEmpCode').val(),
-                "FullName": $('#txtFullName').val(),
-                "Address": $('#txtAddress').val(),
-                "DateOfBirth": $('#txtDateOfBirth').val(),
-                "Email": $('#Email').val(),
-                "PhoneNumber": $('#txtPhoneNumber').val(),
-                "CustomerGroupId": "7a0b757e-41eb-4df6-c6f8-494a84b910f4",
-                "MemberCardCode": $('#txtMemberCard').val(),
-                "CompanyName": $('#txtCompanyName').val(),
-            }
-            console.log(customer);
-
             return;
+
             // gọi service tương ứng thực hiện lưu dữ liệu
             $.ajax({
-                url: 'http://api.manhnv.net/api/customers',
+                url: me.host + me.apiRouter,
                 method: 'POST',
                 data: JSON.stringify(employee),
                 contentType:'application/json'
@@ -144,6 +140,7 @@ class BaseJS {
      * create by: NHSON(1-5-2021)
      * */
     loadData() {
+        var me = this;
         $('table tbody').empty();
         try {
             // lấy thông tin các cột dữ liệu
@@ -152,7 +149,7 @@ class BaseJS {
 
             // lấy dữ liệu về
             $.ajax({
-                url: getDataUrl,
+                url: me.host + me.apiRouter,
                 method: "GET",
             }).done(function (res) {
                 $.each(res, function (index, obj) {
