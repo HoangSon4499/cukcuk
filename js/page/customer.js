@@ -4,12 +4,11 @@
 
 class CustomerJS extends BaseJS{
     constructor() {
-       /* this.loadData();*/
         super();
     }
 
-    setDataUrl() {
-        this.getDataUrl = "http://api.manhnv.net/api/customers";
+    setApiRouter() {
+        this.apiRouter = "/api/customers";
     }
 
     /**

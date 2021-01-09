@@ -19,8 +19,36 @@ class BaseJS {
         var me = this;
         // sự kiện click khi nhấn thêm mới
         $('#btnAdd').click(function () {
-            // hiển thị diglog thêm
-            $("#dialog").show();
+
+            try {
+                // hiển thị diglog thêm
+                $("#dialog").show();
+                $('input[type!="radio"]').val(null);
+                // load dữ liệu cho các combobox
+                $('.loading').show();
+                var select = $('select#cbxEmpGroup');
+                select.empty();
+                // lấy dữ liệu nhóm khách hàng
+                $.ajax({
+                    url: me.host + "/api/customergroups",
+                    method: "GET"
+
+                }).done(function (res) {
+                    if (res) {
+                        $.each(res, function (index, obj) {
+                            var option = $(`<option value="${obj.CustomerGroupId}">${obj.CustomerGroupName}</option>`);
+                            select.append(option);
+                        })
+                    }
+                    $('.loading').hide();
+                }).fail(function (res) {
+                    $('.loading').hide();
+                    console.log(res);
+                })
+            } catch (e) {
+                console.log(e);
+            }
+           
         })
 
         // sự kiện click thoát dialog thêm
@@ -56,38 +84,42 @@ class BaseJS {
             // thu thập thông tin dữ liệu được nhập -> build thành object
             // lấy tất cả các control nhập liệu:
             var inputs = $('input[fieldName], select[fieldName]');
-            var customer = {};
+            var entity = {};
             $.each(inputs, function (index, input) {
                 var propertyName = $(this).attr('fieldName');
                 var value = $(this).val();
-                if ($(this).attr('fieldName') == "radio") {
-                    if ($(this).attr('checked') == true) {
-
+                console.log(this);  
+                // check với trường hợp input là radio, thì chỉ cần lấy value của input
+                if ($(this).attr('type') == "radio") {
+                    if (this.checked) {
+                        alert(value);
+                        entity[propertyName] = value;
                     }
+                    debugger;
+                } else {
+                    entity[propertyName] = value;
                 }
                 debugger;
-                customer[propertyName] = value;
-
             })
-            console.log(customer);
+                console.log(entity);
             return;
-
             // gọi service tương ứng thực hiện lưu dữ liệu
             $.ajax({
                 url: me.host + me.apiRouter,
                 method: 'POST',
-                data: JSON.stringify(employee),
+                data: JSON.stringify(entity),
                 contentType:'application/json'
             }).done(function (res) {
                 me.loadData();
-                debugger;
+                // sau khi lưu thành công thì
+                //+ đưa ra thông báo thành công
+                alert('Thêm thành công');
+                //+ ẩn form chi tiết
+                $('#dialog').hide();
             }).fail(function (res) {
-                debugger;
+                alert('Thêm không thành công');
             })
-            // sau khi lưu thành công thì
-            //+ đưa ra thông báo thành công
-            alert('Thêm thành công');
-            //+ ẩn form chi tiết
+            
         })
 
 
@@ -146,7 +178,7 @@ class BaseJS {
             // lấy thông tin các cột dữ liệu
             var columns = $('table thead th');
             var getDataUrl = this.getDataUrl;
-
+            $('.loading').show();
             // lấy dữ liệu về
             $.ajax({
                 url: me.host + me.apiRouter,
@@ -176,8 +208,10 @@ class BaseJS {
                         $(tr).append(td);
                     })
                     $('table tbody').append(tr);
+                    $('.loading').hide();
                 })
             }).fail(function (res) {
+                $('.loading').hide();
                 console.warn(res);
             })
         } catch (e) {

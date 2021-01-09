@@ -4,3 +4,37 @@
 .text-align-right {
     text-align: right;
 }
+.loading{
+    display:none;
+}
+.loading-modal{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color: black;
+    opacity:.4;
+    z-index:9999;
+}
+.loading-icon {
+    position: fixed;
+    top: calc( 50% - 25px);
+    left: calc( 50% - 25px);
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    z-index:99999;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
